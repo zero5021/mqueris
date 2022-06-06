@@ -1,0 +1,227 @@
+    @import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,300;0,500;1,900 & display=swap');
+    body {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 'menu''nav' 'section''footer';
+        grid-template-rows: (1, 1fr);
+        font-family: 'Roboto', sans-serif;
+    }
+    /*mobile*/
+    /*layout contenedor 1*/
+    
+    .contenedor1 {
+        width: 100%;
+    }
+    /*menu de hamburguesa*/
+    
+    .menu {
+        grid-area: menu;
+        background-color: rgb(174, 177, 187);
+        height: 50px;
+    }
+    /*ocultar logo y menu*/
+    
+    .logo2 {
+        visibility: hidden;
+    }
+    
+    h3 {
+        visibility: hidden;
+    }
+    /*selector*/
+    
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        background-color: rgb(246, 228, 228);
+    }
+    /*tarjetas*/
+    
+    section {
+        grid-area: section;
+        background-color: rgb(237, 214, 10);
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    /*imagen de tarjetas*/
+    
+    .obj {
+        height: 220px;
+        width: 250px;
+        margin: 0px;
+        text-align: center;
+        background-color: rgb(224, 213, 64);
+    }
+    /*tamaño de logo zero classic*/
+    
+    .logo2 {
+        width: 30px;
+    }
+    
+    button {
+        text-align: center;
+        font-size: 1em;
+        width: 250px;
+        background-color: rgb(76, 67, 82);
+        height: 35px;
+        color: aliceblue;
+        border: 0ch;
+    }
+    /*stilo de la fuente*/
+    
+    h1 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    h2 {
+        text-align: center;
+        color: rgb(81, 11, 11);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        margin: 0px;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 1em;
+        text-align: center;
+        align-items: center;
+    }
+    
+    span {
+        font-size: 12px;
+        color: rgba(88, 87, 87, 0.845);
+    }
+    /*ancho de selector*/
+    
+    .selector {
+        width: 80%;
+    }
+    
+    .cantidad {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgba(88, 87, 87, 0.871);
+    }
+    /*tam img de tarjetas*/
+    
+    .obj {
+        height: 220px;
+        width: 250px;
+        margin: 0px;
+        text-align: center;
+        background-color: turquoise;
+    }
+    
+    .num button {
+        width: 30px;
+    }
+    /*carrusel de num*/
+    
+    .num {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        background-color: rgb(81, 81, 81);
+        grid-area: num;
+    }
+    
+    footer {
+        grid-area: footer;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(40, 36, 43);
+    }
+    /*desk*/
+    
+    @media screen and (min-width: 1024px) {
+        .contenedor1 {
+            max-height: 100vh;
+            min-width: 100vh;
+            display: grid;
+            grid-template-areas: 'menu nav nav nav nav nav' 'menu section section section section section ' 'menu section section section section section ' 'footer num num num num num ';
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: auto auto auto;
+        }
+        /*selector*/
+        .nav {
+            grid-area: nav;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            background-color: rgb(246, 228, 228);
+            height: 80px;
+        }
+        /*ocultar hamburquesa*/
+        .menu .fa-bars {
+            visibility: hidden;
+        }
+        /*mostrar menu y logo zeroclassic*/
+        .menu {
+            grid-area: menu;
+            background-color: rgb(174, 177, 187);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 30px;
+            margin: 0;
+            text-align: center;
+            align-items: center;
+            height: auto;
+        }
+        .logo2 {
+            width: 250px;
+            visibility: visible;
+        }
+        /*tarjetas*/
+        section {
+            grid-area: section;
+            background-color: rgb(187, 255, 147);
+            gap: 10px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        /*tarjeta1, 2, 3, 4, 5*/
+        .Card {
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+            background-color: rgba(207, 213, 31, 0.793);
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        h3 {
+            visibility: visible;
+        }
+        /*carrusel de numeros*/
+        .num {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            background-color: rgb(26, 32, 31);
+            grid-area: num;
+        }
+        footer {
+            grid-area: footer;
+            background-color: rgb(38, 36, 40);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    }
